@@ -23,7 +23,7 @@ export class DbzService {
     }
   ];
 
-  onNewCharacter(character:Character): void {
+  addCharacter(character:Character): void {
     //console.log('MainPage');
     //console.log(character);
     // PRIMERO PONER EL SPREAD Y LUEGO LO QUE SE QUIERE SOBREESCRIBIR
@@ -41,7 +41,8 @@ export class DbzService {
 
   // TODO
   deleteCharacterById(id: string){
-    this.characters.filter(character => character.id !== id);
+    console.log('ID ELIMINADO '+id);
+    this.characters = this.characters.filter(character => character.id !== id);
   }
 
 }
